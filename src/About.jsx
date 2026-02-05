@@ -19,7 +19,7 @@ const About = () => {
               />
               <h3>Experience</h3>
               <p>
-                2+ years <br />
+                2 years <br />
                 Full Stack Web Developer
               </p>
             </div>
