@@ -21,7 +21,7 @@ const Footer = () => {
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2025 Harsh Brahmkshatriya. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Harsh Brahmkshatriya. All Rights Reserved.</p>
     </footer>
   );
 };

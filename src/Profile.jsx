@@ -2,7 +2,7 @@ import React from "react";
 import harshImage from "./assets/harsh.jpeg";
 import linkedinIcon from "./assets/linkedin.png";
 import githubIcon from "./assets/github.png";
-import pdfFile from "./assets/Harsh.Brahmkshatriya.pdf";
+import pdfFile from "./assets/Harsh.brahmkshatriya.pdf";
 
 const Profile = () => {
   return (
@@ -17,7 +17,7 @@ const Profile = () => {
       <div className="section__text">
         <p className="section__text__p1">Hello, I'm</p>
         <h1 className="title">Harsh Brahmkshatriya</h1>
-        <p className="section__text__p2">Full Stack Developer</p>
+        <p className="section__text__p2">Full Stack Web Developer</p>
         <div className="btn-container">
           <button
             className="btn btn-color-2"

@@ -1,102 +1,82 @@
 import React from "react";
-import ecommerce from "../src/assets/e-commerce1.png";
 import arrow from "./assets/arrow.png";
 
 const Projects = () => {
+  const projects = [
+    {
+      title: "DocAI - AI-powered Document Analysis",
+      description:
+        "Built a platform to automatically extract summaries and key points from PDF documents using OpenAI API. Developed scalable RESTful APIs with Spring Boot and optimized MongoDB for fast retrieval.",
+      github: "https://github.com/harshbr/DocAI",
+      tech: ["Java", "Spring Boot", "MongoDB", "REST API", "OpenAI API"],
+    },
+    {
+      title: "Online Food Ordering",
+      description:
+        "Created an online food ordering platform with cart functionality, checkout, and order history.",
+      github: "https://github.com/harshbr/FoodOrdering.git",
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
+    },
+    {
+      title: "Online Shopping",
+      description:
+        "Developed a fully functional e-commerce platform with product management, cart, and checkout functionality.",
+      github: "https://github.com/harshbr/e-commerce.git",
+      tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Redux",
+        "Chakra UI",
+      ],
+    },
+    {
+      title: "Online Bus Ticket Booking",
+      description:
+        "Built a bus ticket booking platform with seat selection, ticket download, and admin dashboard for scheduling and user management.",
+      github: "https://github.com/harshbr/hotelbooking.git",
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
+    },
+  ];
+
   return (
     <section id="projects">
-      <p className="section__text__p1">Browse My Recent</p>
+      <p className="section__text__p1">Browse My</p>
       <h1 className="title">Projects</h1>
-      <div className="experience-details-container">
-        <div className="about-containers">
-          <div className="details-container color-container">
-            <div className="article-container">
-              <img
-                src="https://static.vecteezy.com/system/resources/thumbnails/002/076/168/small/food-delivery-banner-design-flat-design-online-order-vector.jpg"
-                alt="Project 1"
-                className="project-img"
-              />
+
+      <div className="projects-container">
+        {projects.map((project) => (
+          <div key={project.title} className="project-card">
+            <h2 className="project-title">{project.title}</h2>
+            <p className="project-description">{project.description}</p>
+
+            <div className="tech-stack">
+              {project.tech.map((tech) => (
+                <span key={tech} className="tech-tag">
+                  {tech}
+                </span>
+              ))}
             </div>
-            <h2 className="experience-sub-title project-title">
-              Online Food Ordering
-            </h2>
-            <div className="btn-container">
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() =>
-                  (window.location.href = "https://github.com/harshbr")
-                }
-              >
-                Github
-              </button>
-              {/* <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => (window.location.href = "https://github.com/")}
-              >
-                Live Demo
-              </button> */}
-            </div>
+
+            <button
+              className="btn project-btn"
+              onClick={() => (window.location.href = project.github)}
+            >
+              GitHub
+            </button>
           </div>
-          <div className="details-container color-container">
-            <div className="article-container">
-              <img src={ecommerce} alt="Project 2" className="project-img" />
-            </div>
-            <h2 className="experience-sub-title project-title">
-              Online Shopping
-            </h2>
-            <div className="btn-container">
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() =>
-                  (window.location.href = "https://github.com/harshbr")
-                }
-              >
-                Github
-              </button>
-              {/* <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => (window.location.href = "https://github.com/")}
-              >
-                Live Demo
-              </button> */}
-            </div>
-          </div>
-          <div className="details-container color-container">
-            <div className="article-container">
-              <img
-                src="https://t4.ftcdn.net/jpg/05/06/05/69/360_F_506056987_eMPxuEX8apar4UzIsG8xo1lHuH9WqGmZ.jpg"
-                alt="Project 3"
-                className="project-img"
-              />
-            </div>
-            <h2 className="experience-sub-title project-title">
-              Online Bus Ticket Booking
-            </h2>
-            <div className="btn-container">
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() =>
-                  (window.location.href = "https://github.com/harshbr")
-                }
-              >
-                Github
-              </button>
-              {/* <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => (window.location.href = "https://github.com/")}
-              >
-                Live Demo
-              </button> */}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-      <img
-        src={arrow}
-        alt="Arrow icon"
-        className="icon arrow"
-        onClick={() => (window.location.href = "./#contact")}
-      />
+
+      <div className="arrow-container">
+        <img
+          src={arrow}
+          alt="Arrow icon"
+          className="icon arrow"
+          onClick={() => (window.location.href = "./#contact")}
+        />
+      </div>
     </section>
   );
 };
