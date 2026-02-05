@@ -2,7 +2,7 @@ import React from "react";
 import harshImage from "./assets/harsh.jpeg";
 import linkedinIcon from "./assets/linkedin.png";
 import githubIcon from "./assets/github.png";
-import pdfFile from "./assets/Harsh.brahmkshatriya.pdf";
+import pdfFile from "./assets/Harsh.Brahmkshatriya.pdf";
 
 const Profile = () => {
   return (
