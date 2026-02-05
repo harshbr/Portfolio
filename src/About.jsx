@@ -20,7 +20,7 @@ const About = () => {
               <h3>Experience</h3>
               <p>
                 2 years <br />
-                Full Stack Web Developer
+                Software Developer
               </p>
             </div>
             <div className="details-container">
